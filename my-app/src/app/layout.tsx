@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Hanken_Grotesk } from "next/font/google";
 import "./globals.css";
+// import { NavbarDemo } from "@/components/layout/NavbarDemo";
 
 const hankenGrotesk = Hanken_Grotesk({
   weight: ["500", "600", "700", "800", "900"],
@@ -22,6 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${hankenGrotesk.className} antialiased`}>
+        {/* <NavbarDemo /> */}
         {children}
       </body>
     </html>
