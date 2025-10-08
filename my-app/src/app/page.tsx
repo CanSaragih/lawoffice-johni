@@ -4,7 +4,7 @@ import Home from "@/components/section/Home";
 export default function Page() {
   return (
     <>
-      <NavbarDemo />
+      {/* <NavbarDemo /> */}
       <Home />
     </>
   );

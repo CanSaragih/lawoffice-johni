@@ -11,6 +11,7 @@ import {
   MobileNavMenu,
 } from "@/components/ui/navbar/resizable-navbar";
 import { useState } from "react";
+import handleWhatsAppClick from "../ui/wa/openWhatsApp";
 
 export function NavbarDemo() {
   const navItems = [
@@ -42,7 +43,9 @@ export function NavbarDemo() {
           <NavbarLogo />
           <NavItems items={navItems} />
           <div className="flex items-center gap-4">
-            <NavbarButton variant="primary">Konsultasi Gratis</NavbarButton>
+            <NavbarButton variant="primary" onClick={handleWhatsAppClick}>
+              Konsultasi Gratis
+            </NavbarButton>
           </div>
         </NavBody>
 
@@ -76,7 +79,7 @@ export function NavbarDemo() {
                 variant="primary"
                 className="w-full"
               >
-                Book a call
+                Konsultasi Gratis
               </NavbarButton>
             </div>
           </MobileNavMenu>
