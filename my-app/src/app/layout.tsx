@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Hanken_Grotesk } from "next/font/google";
+import { Hanken_Grotesk, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import { NavbarDemo } from "@/components/layout/NavbarDemo";
 import FloatingWhatsApp from "@/components/FloaringWhatsApp";
@@ -7,6 +7,13 @@ import FloatingWhatsApp from "@/components/FloaringWhatsApp";
 const hankenGrotesk = Hanken_Grotesk({
   weight: ["500", "600", "700", "800", "900"],
   variable: "--font-hanken-grotesk",
+  subsets: ["latin"],
+  display: "swap",
+});
+
+const playfairDisplay = Playfair_Display({
+  weight: ["400", "500", "600", "700", "800", "900"],
+  variable: "--font-playfair-display",
   subsets: ["latin"],
   display: "swap",
 });
@@ -23,7 +30,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${hankenGrotesk.className} antialiased`}>
+      <body
+        className={`${hankenGrotesk.className} ${playfairDisplay.variable} antialiased`}
+      >
         <NavbarDemo />
         {children}
         <FloatingWhatsApp />
