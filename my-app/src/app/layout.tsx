@@ -3,6 +3,7 @@ import { Hanken_Grotesk, Playfair_Display, WindSong } from "next/font/google";
 import "./globals.css";
 import { NavbarDemo } from "@/components/layout/NavbarDemo";
 import FloatingWhatsApp from "@/components/FloaringWhatsApp";
+import FooterSection from "@/components/ui/Footer/Footer";
 
 const hankenGrotesk = Hanken_Grotesk({
   weight: ["500", "600", "700", "800", "900"],
@@ -42,7 +43,9 @@ export default function RootLayout({
       >
         <NavbarDemo />
         {children}
+
         <FloatingWhatsApp />
+        <FooterSection />
       </body>
     </html>
   );
