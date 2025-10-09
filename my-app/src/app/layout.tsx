@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Hanken_Grotesk, Playfair_Display } from "next/font/google";
+import { Hanken_Grotesk, Playfair_Display, WindSong } from "next/font/google";
 import "./globals.css";
 import { NavbarDemo } from "@/components/layout/NavbarDemo";
 import FloatingWhatsApp from "@/components/FloaringWhatsApp";
@@ -18,6 +18,13 @@ const playfairDisplay = Playfair_Display({
   display: "swap",
 });
 
+const windSong = WindSong({
+  weight: ["400"],
+  variable: "--font-windsong",
+  subsets: ["latin"],
+  display: "swap",
+});
+
 export const metadata: Metadata = {
   title: "Jhoni Purba - Pengacara",
   description: "Professional Pengacara Jhoni Purba",
@@ -31,7 +38,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${hankenGrotesk.className} ${playfairDisplay.variable} antialiased`}
+        className={`${hankenGrotesk.className} ${playfairDisplay.variable} ${windSong.variable} antialiased`}
       >
         <NavbarDemo />
         {children}

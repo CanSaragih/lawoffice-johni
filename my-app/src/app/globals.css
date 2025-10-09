@@ -124,6 +124,14 @@ body {
   --sidebar-ring: oklch(0.551 0.027 264.364);
 }
 
+.tandatangan-font {
+  font-family: "var(--font-great-vibes)";
+}
+
+.signature-font {
+  font-family: "var(--font-playfair-display)";
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
