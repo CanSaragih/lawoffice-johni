@@ -1,15 +1,10 @@
 "use client";
 import { motion, easeOut } from "framer-motion";
 import handleWhatsAppClick from "../ui/wa/openWhatsApp";
+import heroData from "@/data/heroData";
+import { MoveRight } from "lucide-react";
 
 // Data untuk reusability
-const heroData = {
-  badge: "hukum ★ keadilan",
-  title: "solusi kreatif untuk masalah hukum",
-  description:
-    "Kami berkomitmen memberikan layanan hukum terbaik dan dukungan penuh untuk melindungi hak-hak Anda serta mencapai hasil yang optimal dengan pengalaman bertahun-tahun di bidang hukum.",
-  ctaButton: "buat janji konsultasi",
-};
 
 // Animation variants
 const containerVariants = {
@@ -101,12 +96,11 @@ export default function Home() {
               className="text-center lg:text-left"
             >
               <motion.button
-                whileHover={{ scale: 1.05, y: -2 }}
-                whileTap={{ scale: 0.95 }}
                 onClick={handleWhatsAppClick}
-                className="inline-block bg-[#0C1D36] px-8 py-4 text-lg font-semibold text-white transition-all duration-300 hover:bg-[#1a2f4a] hover:shadow-lg rounded-md font-serif capitalize"
+                className="inline-block bg-zinc-50 px-8 py-4 text-lg font-semibold text-zinc-800 transition-all duration-300 capitalize hover:bg-amber-500 shadow hover:text-white cursor-pointer"
               >
                 {heroData.ctaButton}
+                <MoveRight className="inline-block ml-3" />
               </motion.button>
             </motion.div>
           </div>

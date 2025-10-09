@@ -1,42 +1,6 @@
 "use client";
+import servicesData from "@/data/ServiceData";
 import { motion } from "framer-motion";
-import { Scale, FileText, Shield, Users } from "lucide-react";
-
-// Data untuk reusability
-const servicesData = [
-  {
-    id: 1,
-    icon: Scale,
-    title: "Konsultasi Hukum Umum",
-    description:
-      "Layanan konsultasi hukum profesional untuk berbagai permasalahan hukum dengan pengalaman bertahun-tahun.",
-    featured: false,
-  },
-  {
-    id: 2,
-    icon: FileText,
-    title: "Pembuatan Kontrak Legal",
-    description:
-      "Penyusunan dan review kontrak bisnis, perjanjian kerjasama, dan dokumen hukum lainnya.",
-    featured: false,
-  },
-  {
-    id: 3,
-    icon: Shield,
-    title: "Perlindungan Hukum",
-    description:
-      "Memberikan perlindungan hukum terbaik untuk individu dan perusahaan dalam berbagai kasus.",
-    featured: false,
-  },
-  {
-    id: 4,
-    icon: Users,
-    title: "Mediasi & Arbitrase",
-    description:
-      "Penyelesaian sengketa melalui mediasi dan arbitrase untuk solusi yang efektif dan efisien.",
-    featured: false,
-  },
-];
 
 // Animation variants
 const containerVariants = {
@@ -63,7 +27,7 @@ const cardVariants = {
 
 export default function Services() {
   return (
-    <section className="relative -mt-12 pb-20 bg-transparent">
+    <section className="relative -mt-15 pb-20 bg-transparent">
       {/* Services Container */}
       <div className="relative z-20 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Services Grid */}
