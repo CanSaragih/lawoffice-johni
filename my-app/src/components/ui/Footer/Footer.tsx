@@ -20,7 +20,7 @@ export default function FooterSection() {
                 className="w-full rounded-full border-gray-200 bg-gray-100 p-4 pe-32 text-sm font-medium"
                 id="email"
                 type="email"
-                placeholder="john@doe.com"
+                placeholder="example@gmail.com"
               />
 
               <button className="absolute end-1 top-1/2 -translate-y-1/2 rounded-full bg-amber-600 px-5 py-3 text-sm font-medium text-white transition hover:bg-amber-700 cursor-pointer">
@@ -100,25 +100,21 @@ export default function FooterSection() {
                 </svg>
               </a>
 
+              {/* tiktok */}
               <a
                 className="text-gray-700 transition hover:text-gray-700/75"
                 href="#"
                 target="_blank"
                 rel="noreferrer"
               >
-                <span className="sr-only"> GitHub </span>
-
+                <span className="sr-only"> TikTok </span>
                 <svg
                   className="size-6"
                   fill="currentColor"
-                  viewBox="0 0 24 24"
+                  viewBox="0 0 256 256"
                   aria-hidden="true"
                 >
-                  <path
-                    fillRule="evenodd"
-                    d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
-                    clipRule="evenodd"
-                  />
+                  <path d="M208 72a48 48 0 0 1-48-48h-32v136a24 24 0 1 1-24-24v-32a56 56 0 1 0 56 56V86.63A79.5 79.5 0 0 0 208 104Z" />
                 </svg>
               </a>
 
@@ -160,7 +156,7 @@ export default function FooterSection() {
                     href="#"
                   >
                     {" "}
-                    Marketing{" "}
+                    Konsultasi Hukum{" "}
                   </a>
                 </li>
 
@@ -169,7 +165,7 @@ export default function FooterSection() {
                     className="text-gray-700 transition hover:text-gray-700/75"
                     href="#"
                   >
-                    Graphic Design
+                    Litigasi & Sengketa
                   </a>
                 </li>
 
@@ -178,7 +174,7 @@ export default function FooterSection() {
                     className="text-gray-700 transition hover:text-gray-700/75"
                     href="#"
                   >
-                    App Development
+                    Hukum Perdata & Pidana
                   </a>
                 </li>
 
@@ -187,7 +183,7 @@ export default function FooterSection() {
                     className="text-gray-700 transition hover:text-gray-700/75"
                     href="#"
                   >
-                    Web Development
+                    Pendampingan Bisnis
                   </a>
                 </li>
               </ul>
@@ -203,7 +199,7 @@ export default function FooterSection() {
                     href="#"
                   >
                     {" "}
-                    About{" "}
+                    Beranda{" "}
                   </a>
                 </li>
 
@@ -213,7 +209,7 @@ export default function FooterSection() {
                     href="#"
                   >
                     {" "}
-                    Careers{" "}
+                    Tentang Kami{" "}
                   </a>
                 </li>
 
@@ -223,7 +219,7 @@ export default function FooterSection() {
                     href="#"
                   >
                     {" "}
-                    History{" "}
+                    Layanan{" "}
                   </a>
                 </li>
 
@@ -233,7 +229,7 @@ export default function FooterSection() {
                     href="#"
                   >
                     {" "}
-                    Our Team{" "}
+                    Kontak{" "}
                   </a>
                 </li>
               </ul>
@@ -243,16 +239,6 @@ export default function FooterSection() {
               <strong className="font-medium text-gray-900"> Bantuan </strong>
 
               <ul className="mt-6 space-y-1">
-                <li>
-                  <a
-                    className="text-gray-700 transition hover:text-gray-700/75"
-                    href="#"
-                  >
-                    {" "}
-                    FAQs{" "}
-                  </a>
-                </li>
-
                 <li>
                   <a
                     className="text-gray-700 transition hover:text-gray-700/75"
@@ -269,7 +255,7 @@ export default function FooterSection() {
                     href="#"
                   >
                     {" "}
-                    Live Chat{" "}
+                    Social Media{" "}
                   </a>
                 </li>
               </ul>
@@ -278,8 +264,9 @@ export default function FooterSection() {
         </div>
 
         <div className="mt-16 border-t border-gray-100 pt-8">
-          <p className="text-center text-xs/relaxed text-gray-500">
-            © Company 2022. All rights reserved.
+          <p className="text-center text-sm/relaxed text-gray-500">
+            © Company 2022. <span className="font-bold">Jhoni Purba. S.H</span>{" "}
+            All rights reserved.
           </p>
         </div>
       </div>
