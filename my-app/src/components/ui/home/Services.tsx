@@ -27,7 +27,7 @@ const cardVariants = {
 
 export default function Services() {
   return (
-    <section className="relative -mt-15 pb-20 bg-transparent">
+    <section className="relative -mt-15 bg-transparent">
       {/* Services Container */}
       <div className="relative z-20 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Services Grid */}

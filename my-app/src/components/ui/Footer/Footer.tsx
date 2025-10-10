@@ -105,11 +105,11 @@ export default function FooterSection() {
                 className="text-gray-700 transition hover:text-gray-700/75"
                 href="#"
                 target="_blank"
-                rel="noreferrer"
+                rel="noponer noreferrer"
               >
                 <span className="sr-only"> TikTok </span>
                 <svg
-                  className="size-6"
+                  className="w-6 h-6"
                   fill="currentColor"
                   viewBox="0 0 256 256"
                   aria-hidden="true"

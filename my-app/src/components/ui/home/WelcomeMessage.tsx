@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function WelcomeMessage() {
   return (
-    <section className="py-15 bg-white text-gray-800">
+    <section className="bg-white text-gray-800">
       <div className="max-w-7xl mx-auto px-6 md:px-12 grid md:grid-cols-2 gap-12 items-start leading-relaxed">
         {/* Kolom kiri */}
         <div>
