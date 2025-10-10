@@ -8,7 +8,7 @@ export default function WelcomeMessage() {
         <div>
           <div className="flex items-start">
             <span className="text-7xl font-serif font-bold text-[#1a2540] mr-3">
-              W
+              S
             </span>
             <p className="text-lg">
               selamat datang semuanya, di mana kami berdedikasi untuk memberikan
