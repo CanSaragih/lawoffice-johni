@@ -1,5 +1,7 @@
 "use client";
 
+import { MoveRight } from "lucide-react";
+
 export default function FooterSection() {
   return (
     <footer className="bg-white border-t border-gray-200">
@@ -139,6 +141,16 @@ export default function FooterSection() {
                   />
                 </svg>
               </a>
+            </div>
+            <div className="mt-10 mb-10 text-center text-zinc-600 hover:text-zinc-600/70 lg:text-left flex items-center justify-center lg:justify-start gap-2">
+              <a
+                href="https://maps.app.goo.gl/v2MtfF2BzsHHHqGi8"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Lokasi Google maps
+              </a>
+              <MoveRight />
             </div>
           </div>
 

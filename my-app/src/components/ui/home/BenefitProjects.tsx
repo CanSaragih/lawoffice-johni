@@ -39,20 +39,26 @@ export default function BenefitProjects() {
           {benefitData.map((benefit, index) => (
             <div
               key={index}
-              className="flex flex-col bg-white shadow-lg hover:shadow-xl transition-shadow rounded-lg p-8"
+              className="
+                relative flex flex-col bg-white shadow-lg hover:shadow-xl 
+                transition-shadow rounded-lg p-8 overflof-hidden
+                before:content-[''] before:absolute before:top-0 before:left-0 
+                before:h-[3px] before:bg-red-700 before:w-0 
+                before:transition-[width] before:ease-out before:duration-500 hover:before:w-full"
             >
               <div className="mb-4">
-                {" "}
                 <Image
                   src={benefit.icon}
                   alt={benefit.title}
                   width={50}
                   height={50}
-                />{" "}
+                />
               </div>
+
               <h2 className="text-2xl text-zinc-700 hover:text-red-800 transition-colors duration-300 mb-3 font-['Koh_Santepheap']">
                 {benefit.title}
               </h2>
+
               <p className="text-gray-500 text-sm leading-relaxed">
                 {benefit.description}
               </p>
