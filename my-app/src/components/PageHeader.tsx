@@ -40,7 +40,7 @@ const PageHeader: React.FC<PageHeaderProps> = ({ title, bgImage }) => {
         </h1>
 
         {/* 🔹 Breadcrumb */}
-        <div className="text-gray-200 text-lg flex items-center gap-2">
+        <div className="text-gray-200 text-lg flex items-center gap-2 mt-8">
           <Link
             href="/"
             className="hover:text-red-400 transition-colors duration-200"
