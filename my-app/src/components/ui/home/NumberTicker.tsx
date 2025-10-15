@@ -89,7 +89,7 @@ export default function NumberTickerSection() {
           >
             <h2 className="text-6xl lg:text-7xl font-extrabold text-zinc-100 mb-2 relative inline-flex items-start">
               <span className="tabular-nums">{counts[i].toLocaleString()}</span>
-              <span className="text-2xl font-semibold align-super ml-1 translate-y-[-0.2em] text-amber-600">
+              <span className="text-2xl font-semibold align-super ml-1 translate-y-[-0.2em] text-red-300">
                 +
               </span>
             </h2>

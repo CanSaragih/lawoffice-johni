@@ -70,7 +70,7 @@ export default function Home() {
             {/* Badge */}
             <motion.div variants={itemVariants} className="mb-6">
               <div className="flex items-center justify-center lg:justify-start">
-                <span className="text-xl leading-tight font-serif font-bold tracking-widest text-amber-500 uppercase">
+                <span className="text-xl leading-tight font-serif font-bold tracking-widest text-red-600 uppercase">
                   {heroData.badge}
                 </span>
               </div>
@@ -97,7 +97,7 @@ export default function Home() {
             >
               <motion.button
                 onClick={handleWhatsAppClick}
-                className="inline-block bg-zinc-50 px-8 py-4 text-lg font-semibold text-zinc-800 transition-all duration-300 capitalize hover:bg-amber-500 shadow hover:text-white cursor-pointer"
+                className="inline-block bg-zinc-50 px-8 py-4 text-lg font-semibold text-zinc-800 transition-all duration-300 capitalize hover:bg-red-700 shadow hover:text-white cursor-pointer"
               >
                 {heroData.ctaButton}
                 <MoveRight className="inline-block ml-3" />

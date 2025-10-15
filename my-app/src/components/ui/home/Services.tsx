@@ -48,13 +48,13 @@ export default function Services() {
                 className="group relative overflow-hidden bg-white p-8 shadow-md transition-all duration-500 cursor-pointer hover:shadow-lg hover:rounded-xl"
               >
                 {/* Hover Background Effect */}
-                <div className="absolute inset-0 bg-gradient-to-br from-amber-500 to-amber-600 opacity-0 transition-all duration-300 group-hover:opacity-100" />
+                <div className="absolute inset-0 bg-gradient-to-br from-red-700/90 to-red-700 opacity-0 transition-all duration-300 group-hover:opacity-100" />
 
                 {/* Card Content */}
                 <div className="relative z-10">
                   {/* Icon */}
-                  <div className="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-xl bg-amber-100 transition-all duration-300 group-hover:bg-white/20">
-                    <IconComponent className="h-8 w-8 text-amber-600 transition-colors duration-300 group-hover:text-white" />
+                  <div className="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-xl bg-red-100 transition-all duration-300 group-hover:bg-white/20">
+                    <IconComponent className="h-8 w-8 text-red-600 transition-colors duration-300 group-hover:text-white" />
                   </div>
 
                   {/* Title */}
@@ -69,7 +69,8 @@ export default function Services() {
                 </div>
 
                 {/* Decorative Element */}
-                <div className="absolute -right-6 -top-6 h-20 w-20 rounded-full bg-amber-500/10 transition-all duration-300 group-hover:bg-white/10" />
+                {/* <div className="absolute -right-6 -top-6 h-20 w-20 rounded-full bg-red-500/10 transition-all duration-300 group-hover:bg-white/10"></div> */}
+                <IconComponent className="absolute -right-5 -top-5 h-20 w-20 text-white transition-all duration-300 group-hover:text-zinc-200/20" />
               </motion.div>
             );
           })}

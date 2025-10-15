@@ -25,7 +25,7 @@ export default function FooterSection() {
                 placeholder="example@gmail.com"
               />
 
-              <button className="absolute end-1 top-1/2 -translate-y-1/2 rounded-full bg-amber-600 px-5 py-3 text-sm font-medium text-white transition hover:bg-amber-700 cursor-pointer">
+              <button className="absolute end-1 top-1/2 -translate-y-1/2 rounded-full bg-red-700 px-5 py-3 text-sm font-medium text-white transition hover:bg-red-600 cursor-pointer">
                 Kirim Pesan
               </button>
             </div>

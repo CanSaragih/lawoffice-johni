@@ -12,7 +12,7 @@ export default function LayananKami() {
           <div className="relative">
             <div className="absolute -top-8 -left-8 w-36 h-36 sm:w-44 sm:h-44 bg-red-100 rounded-full -z-10"></div>
             <p className="text-red-700 font-semibold text-xs sm:text-sm uppercase tracking-widest mb-2">
-              Tentang Kami
+              Layanan Kami
             </p>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-['Koh_Santepheap'] text-zinc-700 leading-snug mb-4 sm:mb-6">
               Keunggulan, layanan hukum
