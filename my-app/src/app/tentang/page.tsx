@@ -1,5 +1,6 @@
 import PageHeader from "@/components/PageHeader";
-import LayananKami from "@/components/ui/about/LayananKami";
+import About from "@/components/section/About";
+import BenefitProjects from "@/components/ui/home/BenefitProjects";
 import NumberTickerSection from "@/components/ui/home/NumberTicker";
 
 export default function TentangPage() {
@@ -9,8 +10,13 @@ export default function TentangPage() {
         <PageHeader title="Tentang Kami" bgImage="/img/header.jpg" />
 
         <div className="mb-10 md:mb-20">
-          <LayananKami />
+          <About />
         </div>
+
+        <div className="mb-10 md:mb-20">
+          <BenefitProjects />
+        </div>
+
         <div>
           <NumberTickerSection />
         </div>

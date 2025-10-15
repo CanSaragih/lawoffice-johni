@@ -20,10 +20,10 @@ export default function Page() {
       <div className="mb-30">
         <NumberTickerSection />
       </div>
-      <div className="30">
+      <div className="mb-30">
         <StrategySection />
       </div>
-      <div className="15">
+      <div className="mb-15">
         <BenefitProjects />
       </div>
     </>

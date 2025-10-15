@@ -25,11 +25,11 @@ const benefitData = [
 
 export default function BenefitProjects() {
   return (
-    <section className="bg-white text-zinc-700 py-20">
+    <section className="bg-white text-zinc-700">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         {/* Judul Section */}
         <div className="mb-5 md:mb-12">
-          <h1 className="text-2xl sm:text-2xl md:text-4xl text-center md:text-left leading-snug font-semibold text-zinc-700 mt-3 font-['Koh_Santepheap']">
+          <h1 className="text-2xl sm:text-2xl md:text-4xl text-center md:text-left leading-snug font-bold text-zinc-700 mt-3">
             Bersama kami
           </h1>
         </div>

@@ -12,7 +12,6 @@ interface PageHeaderProps {
 const PageHeader: React.FC<PageHeaderProps> = ({ title, bgImage }) => {
   const pathname = usePathname();
 
-  // Ambil segmen terakhir dari URL, misal: "/tentang" -> "Tentang"
   const currentPage =
     pathname === "/"
       ? "Beranda"
