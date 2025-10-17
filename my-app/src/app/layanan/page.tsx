@@ -1,5 +1,6 @@
 import PageHeader from "@/components/PageHeader";
 import LayananKami from "@/components/ui/about/LayananKami";
+import StrategySection from "@/components/ui/home/StrategySection";
 
 export default function LayananPage() {
   return (
@@ -10,6 +11,9 @@ export default function LayananPage() {
         </div>
         <div className="mb-10 md:mb-20">
           <LayananKami />
+        </div>
+        <div className="mb-10 md:mb-20">
+          <StrategySection />
         </div>
       </div>
     </>

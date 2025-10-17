@@ -32,8 +32,8 @@ export default function FooterSection() {
           </form>
         </div>
 
-        <div className="mt-16 grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-32">
-          <div className="mx-auto max-w-sm lg:max-w-none">
+        <div className="mt-16 grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-10">
+          <div className="mx-auto max-w-sm lg:max-w-7xl">
             <p className="mt-4 text-center text-gray-500 lg:text-left lg:text-lg">
               Kami percaya bahwa setiap permasalahan hukum memiliki jalan keluar
               terbaik, dan kami hadir untuk menemukannya bersama Anda.
@@ -142,16 +142,6 @@ export default function FooterSection() {
                 </svg>
               </a>
             </div>
-            <div className="mt-10 mb-10 text-center text-zinc-600 hover:text-zinc-600/70 lg:text-left flex items-center justify-center lg:justify-start gap-2">
-              <a
-                href="https://maps.app.goo.gl/v2MtfF2BzsHHHqGi8"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Lokasi Google maps
-              </a>
-              <MoveRight />
-            </div>
           </div>
 
           <div className="grid grid-cols-1 gap-8 text-center lg:grid-cols-3 lg:text-left">
@@ -248,29 +238,21 @@ export default function FooterSection() {
             </div>
 
             <div>
-              <strong className="font-medium text-gray-900"> Bantuan </strong>
-
-              <ul className="mt-6 space-y-1">
-                <li>
-                  <a
-                    className="text-gray-700 transition hover:text-gray-700/75"
-                    href="#"
-                  >
-                    {" "}
-                    Contact{" "}
-                  </a>
-                </li>
-
-                <li>
-                  <a
-                    className="text-gray-700 transition hover:text-gray-700/75"
-                    href="#"
-                  >
-                    {" "}
-                    Social Media{" "}
-                  </a>
-                </li>
-              </ul>
+              <strong className="font-medium text-gray-900"> Lokasi </strong>
+              <p className="mt-6 leading-relaxed">
+                Jl. Haur Jaya II No.2, RT.05/RW.07, Kb. Pedes, Kec. Tanah
+                Sereal, Kota Bogor, Jawa Barat
+              </p>
+              <div className="mt-10 mb-10 text-center text-zinc-600 hover:text-zinc-600/70 lg:text-left flex align-center items-center justify-center lg:justify-start gap-2">
+                <a
+                  href="https://maps.app.goo.gl/v2MtfF2BzsHHHqGi8"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Google maps
+                </a>
+                <MoveRight />
+              </div>
             </div>
           </div>
         </div>
