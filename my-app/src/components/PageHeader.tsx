@@ -24,7 +24,7 @@ const PageHeader: React.FC<PageHeaderProps> = ({ title, bgImage }) => {
 
   return (
     <section
-      className="relative flex items-center justify-start h-[300px] md:h-[400px] bg-center bg-cover"
+      className="relative flex items-center justify-start h-[250px] md:h-[300px] bg-center bg-cover"
       style={{
         backgroundImage: `url(${bgImage})`,
       }}

@@ -30,7 +30,7 @@ export function NavbarDemo() {
     },
     {
       name: "Kontak",
-      link: "/kontak",
+      link: "/contact",
     },
   ];
 
