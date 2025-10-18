@@ -1,32 +1,4 @@
-import { Mail, MapPin, Phone } from "lucide-react";
-
-const contactData = [
-  {
-    icon: MapPin,
-    title: "Alamat Kantor",
-    desc: "Jl. Haur Jaya II No.2, RT.05/RW.07, Kb. Pedes, Kec. Tanah Sereal, Kota Bogor, Jawa Barat",
-  },
-  {
-    icon: Mail,
-    title: "Email Kami",
-    desc: (
-      <>
-        <p>info@lawofficejohni.com</p>
-        <p>contact@lawofficejohni.com</p>
-      </>
-    ),
-  },
-  {
-    icon: Phone,
-    title: "Hubungi Kami",
-    desc: (
-      <>
-        <p>+62 812-3456-7890</p>
-        <p>+62 812-9876-5432</p>
-      </>
-    ),
-  },
-];
+import contactData from "@/data/contactData";
 
 export default function GridContact() {
   return (
@@ -34,7 +6,7 @@ export default function GridContact() {
       {contactData.map((item, index) => (
         <div
           key={index}
-          className="flex flex-col items-center justify-center bg-white p-6 sm:p-8 md:p-10 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300"
+          className="flex flex-col items-center justify-center bg-white p-6 sm:p-8 md:p-10 rounded-xl  shadow-[0_0_10px_rgba(0,0,0,0.04),0_0_25px_rgba(0,0,0,0.06)] hover:shadow-[0_0_30px_rgba(0,0,0,0.10)] transition-shadow duration-300"
         >
           {/* Ikon dalam lingkaran abu muda */}
           <div className="flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 bg-gray-100 rounded-full mb-5 sm:mb-6">
