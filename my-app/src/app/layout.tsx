@@ -9,6 +9,7 @@ import "./globals.css";
 import { NavbarDemo } from "@/components/layout/NavbarDemo";
 import FloatingWhatsApp from "@/components/FloaringWhatsApp";
 import FooterSection from "@/components/ui/Footer/Footer";
+import { Toaster } from "react-hot-toast";
 
 const hankenGrotesk = Hanken_Grotesk({
   weight: ["500", "600", "700", "800", "900"],
@@ -51,6 +52,12 @@ export default function RootLayout({
 
         <FloatingWhatsApp />
         <FooterSection />
+        <Toaster
+          position="top-center"
+          reverseOrder={false}
+          gutter={8}
+          toastOptions={{ duration: 6000, removeDelay: 1000 }}
+        />
       </body>
     </html>
   );

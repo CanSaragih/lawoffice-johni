@@ -144,7 +144,7 @@ export default function FooterSection() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 gap-8 text-center lg:grid-cols-3 lg:text-left">
+          <div className="grid grid-cols-1 gap-2 text-center lg:grid-cols-3 lg:text-left">
             <div>
               <strong className="font-medium text-gray-900">
                 {" "}

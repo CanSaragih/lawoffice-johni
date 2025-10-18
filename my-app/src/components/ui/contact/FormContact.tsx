@@ -1,5 +1,7 @@
 "use client";
+import ButtonKirim from "@/components/ButtonKirim";
 import { useState } from "react";
+import toast from "react-hot-toast";
 
 export default function FormContact() {
   const [form, setForm] = useState({
@@ -9,6 +11,7 @@ export default function FormContact() {
     subjek: "",
     pesan: "",
   });
+  const [status, setStatus] = useState<string>("");
 
   const [errors, setErrors] = useState<{ [key: string]: string }>({});
 
@@ -21,7 +24,7 @@ export default function FormContact() {
     setErrors({ ...errors, [e.target.name]: "" });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const newErrors: { [key: string]: string } = {};
     Object.keys(form).forEach((key) => {
@@ -31,19 +34,60 @@ export default function FormContact() {
     });
     setErrors(newErrors);
 
-    if (Object.keys(newErrors).length === 0) {
-      alert("Terima kasih, pesan Anda telah terkirim!");
+    if (Object.keys(newErrors).length > 0) return;
+
+    setStatus("Loading...");
+    const toastID = toast.loading("Mengirim pesan...");
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: form.nama,
+          email: form.email,
+          subject: form.subjek,
+          message: `
+                Nomor Telepon: ${form.nomor} <br/>
+                Pesan: ${form.pesan}
+                `,
+        }),
+      });
+      const data = await res.json();
+
+      toast.dismiss(toastID);
+
+      if (data.success) {
+        setStatus("success");
+        setForm({
+          nama: "",
+          email: "",
+          nomor: "",
+          subjek: "",
+          pesan: "",
+        });
+        toast.success("Pesan berhasil dikirim!");
+      } else {
+        setStatus("error");
+        toast.error("Gagal mengirim pesan.");
+      }
+    } catch (error) {
+      console.error("Fetch Error", error);
+      setStatus("error");
+      toast.error("Terjjadi kesalahan saat mengirim pesan.");
     }
   };
 
   return (
-    <div className="px-4 md:px-10 lg:px-24 bg-white">
+    <div className="px-4 sm:px-6 md:px-10 lg:px-24 bg-white">
       {/* Header */}
       <div className="text-center mb-8">
-        <h2 className="text-2xl md:text-3xl font-serif font-bold text-gray-800 mb-4">
+        <h2 className="text-xl sm:text-2xl md:text-3xl font-serif font-bold text-gray-800 mb-4">
           Butuh Konsultasi Hukum?
         </h2>
-        <p className="text-gray-500 max-w-2xl mx-auto">
+        <p className="text-gray-500 max-w-2xl mx-auto text-sm sm:text-base">
           Kami siap membantu Anda memberikan solusi terbaik atas permasalahan
           hukum yang Anda hadapi. Silakan isi formulir di bawah ini untuk
           menghubungi tim kami.
@@ -53,10 +97,10 @@ export default function FormContact() {
       {/* Form */}
       <form
         onSubmit={handleSubmit}
-        className="max-w-6xl mx-auto space-y-10 bg-white shadow-[0_0_10px_rgba(0,0,0,0.04),0_0_25px_rgba(0,0,0,0.06)] py-20 px-20"
+        className="max-w-2xl sm:max-w-3xl md:max-w-6xl mx-auto space-y-8 sm:space-y-10 bg-white shadow-[0_0_10px_rgba(0,0,0,0.04),0_0_25px_rgba(0,0,0,0.06)] py-8 sm:py-14 px-4 sm:px-8 md:px-12"
       >
         {/* 2 kolom pertama */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6">
           <div>
             <input
               type="text"
@@ -90,7 +134,7 @@ export default function FormContact() {
         </div>
 
         {/* 2 kolom kedua */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6">
           <div>
             <input
               type="number"
@@ -131,9 +175,9 @@ export default function FormContact() {
             rows={5}
             value={form.pesan}
             onChange={handleChange}
-            className={`w-full px-5 py-4 rounded-4xl ${
+            className={`w-full px-5 py-4 rounded-2xl sm:rounded-4xl ${
               errors.pesan ? "border border-red-600" : "border-gray-200"
-            } bg-gray-50 focus:outline-none focus:ring-1 focus:ring-red-300`}
+            } bg-gray-50 focus:outline-none focus:ring-1 focus:ring-red-300 text-sm sm:text-base`}
           ></textarea>
           {errors.pesan && (
             <p className="text-red-500 text-sm mt-1">{errors.pesan}</p>
@@ -141,13 +185,8 @@ export default function FormContact() {
         </div>
 
         {/* Tombol */}
-        <div className="text-center">
-          <button
-            type="submit"
-            className="border-2 border-red-600 text-red-600 font-medium rounded-full px-15 py-4 hover:bg-red-600 hover:text-white transition duration-300 cursor-pointer"
-          >
-            Kirim Pesan
-          </button>
+        <div className="w-full flex justify-center">
+          <ButtonKirim isLoading={status === "Loading..."} />
         </div>
       </form>
     </div>
