@@ -2,19 +2,48 @@
 
 import layanan from "@/data/layananData";
 import handleWhatsAppClick from "../wa/openWhatsApp";
+import { motion, easeInOut, easeOut } from "framer-motion";
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 40 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.7, ease: easeInOut },
+  },
+};
+
+const cardZoom = {
+  hidden: { opacity: 0, scale: 0.8 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: { duration: 0.5, ease: easeOut },
+  },
+};
 
 export default function LayananKami() {
   return (
-    <section className="py-14 px-4 sm:px-6 md:px-10 lg:px-20 bg-white">
+    <motion.section
+      className="py-14 px-4 sm:px-6 md:px-10 lg:px-20 bg-white"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.2 }}
+      variants={fadeUp}
+    >
       <div className="max-w-7xl mx-auto flex flex-col gap-12 lg:grid lg:grid-cols-[30%_1fr] lg:gap-12 items-center">
         {/* KIRI */}
-        <div className="mb-8 lg:mb-0 w-full">
+        <motion.div
+          className="mb-8 lg:mb-0 w-full"
+          variants={fadeUp}
+          transition={{ delay: 0.1 }}
+        >
           <div className="relative">
             <div className="absolute -top-8 -left-8 w-36 h-36 sm:w-44 sm:h-44 bg-red-100 rounded-full -z-10"></div>
             <p className="text-red-700 font-semibold text-xs sm:text-sm uppercase tracking-widest mb-2">
               Layanan Kami
             </p>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-['Koh_Santepheap'] text-zinc-700 leading-snug mb-4 sm:mb-6">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-['Fjord_One'] text-zinc-700 leading-snug mb-4 sm:mb-6">
               Keunggulan, layanan hukum
               <br />
               yang kami sediakan untuk Anda.
@@ -30,16 +59,29 @@ export default function LayananKami() {
           >
             Konsultasi Layanan →
           </button>
-        </div>
+        </motion.div>
 
         {/* KANAN */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 w-full">
-          {layanan.map((item) => (
-            <div
+        <motion.div
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 w-full"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          variants={{
+            visible: {
+              transition: {
+                staggerChildren: 0.2,
+              },
+            },
+          }}
+        >
+          {layanan.map((item, idx) => (
+            <motion.div
               key={item.id}
               className="relative bg-gray-50 px-6 py-10 sm:px-8 sm:py-12 border border-gray-100
                  hover:text-white hover:rounded-tr-3xl hover:rounded-tl-3xl hover:rounded-br-3xl
                  transition-all duration-300 group cursor-pointer overflow-hidden"
+              variants={cardZoom}
             >
               {/* 🔹 Background Image */}
               <div
@@ -81,10 +123,10 @@ export default function LayananKami() {
                   {item.desc}
                 </p>
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 }

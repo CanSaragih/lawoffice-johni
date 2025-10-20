@@ -34,7 +34,7 @@ const PageHeader: React.FC<PageHeaderProps> = ({ title, bgImage }) => {
 
       {/* 🔹 Konten */}
       <div className="relative z-10 px-6 md:px-20 text-white">
-        <h1 className="text-4xl md:text-6xl font-bold mb-3 font-['Koh_Santepheap']">
+        <h1 className="text-4xl md:text-6xl font-bold mb-3 font-['Fjord_One']">
           {title}
         </h1>
 

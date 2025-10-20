@@ -58,7 +58,7 @@ export default function Services() {
                   </div>
 
                   {/* Title */}
-                  <h3 className="mb-4 text-xl md:text-2xl font-bold font-serif text-[#0a172b] transition-colors duration-300 group-hover:text-white">
+                  <h3 className="mb-4 text-xl md:text-2xl font-['Fjord_One'] text-[#0a172b] transition-colors duration-300 group-hover:text-white">
                     {service.title}
                   </h3>
 

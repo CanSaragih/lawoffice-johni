@@ -78,7 +78,7 @@ export default function Home() {
 
             {/* Main Heading */}
             <motion.div variants={itemVariants} className="mb-6">
-              <h1 className="text-center text-4xl font-bold leading-tight text-[#0C1D36] lg:text-left lg:text-5xl xl:text-6xl font-serif capitalize">
+              <h1 className="text-center text-4xl leading-tight font-bold text-[#0C1D36] lg:text-left lg:text-5xl xl:text-6xl font-serif capitalize">
                 {heroData.title}
               </h1>
             </motion.div>

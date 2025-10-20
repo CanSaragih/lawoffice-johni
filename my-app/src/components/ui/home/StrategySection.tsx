@@ -3,6 +3,17 @@
 import tabs from "@/data/strategyData";
 import Image from "next/image";
 import { useState } from "react";
+import { motion, easeInOut } from "framer-motion";
+
+// Animasi berbeda untuk kolom kiri dan kanan
+const fadeLeft = {
+  hidden: { opacity: 0, x: -40 },
+  visible: { opacity: 1, x: 0, transition: { duration: 0.7, ease: easeInOut } },
+};
+const fadeRight = {
+  hidden: { opacity: 0, x: 40 },
+  visible: { opacity: 1, x: 0, transition: { duration: 0.7, ease: easeInOut } },
+};
 
 export default function StrategySection() {
   const [activeTab, setActiveTab] = useState("Konsultasi Hukum");
@@ -10,14 +21,20 @@ export default function StrategySection() {
   return (
     <section className="bg-white py-16 px-4 sm:py-20 sm:px-6 lg:px-16">
       <div className="max-w-6xl mx-auto">
-        {/* Mobile: Stack vertically, Desktop: Grid layout */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left content */}
-          <div className="order-2 lg:order-1">
+          <motion.div
+            className="order-2 lg:order-1"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+            variants={fadeLeft}
+            transition={{ delay: 0.1 }}
+          >
             <p className="text-red-700 font-extrabold tracking-wide uppercase mb-2 text-sm sm:text-base">
               Strategi Kami
             </p>
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl text-zinc-800 leading-snug mb-4 sm:mb-6 font-['Koh_Santepheap']">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl text-zinc-800 leading-snug mb-4 sm:mb-6 font-['Fjord_One']">
               Mengapa Memilih Kami Sebagai Pendamping Hukum Anda?
             </h2>
             <p className="text-gray-600 mb-6 text-sm sm:text-base leading-relaxed">
@@ -47,10 +64,17 @@ export default function StrategySection() {
             <div className="mt-4 sm:mt-6 transition-all duration-500 ease-in-out">
               {tabs.find((t) => t.name === activeTab)?.content}
             </div>
-          </div>
+          </motion.div>
 
           {/* Right image - Mobile optimized */}
-          <div className="relative order-1 lg:order-2 mb-8 lg:mb-0">
+          <motion.div
+            className="relative order-1 lg:order-2 mb-8 lg:mb-0"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+            variants={fadeRight}
+            transition={{ delay: 0.2 }}
+          >
             {/* Decorative background circle - Hidden on mobile, visible on larger screens */}
             <div className="absolute top-0 right-0 bg-red-700 rounded-full w-40 h-40 sm:w-45 sm:h-45 md:w-55 md:h-55 lg:w-65 lg:h-65 -translate-x-2 -translate-y-2 sm:-translate-x-2 sm:-translate-y-2 md:-translate-x-35 md:-translate-y-2 lg:-translate-x-0 lg:-translate-y-10"></div>
 
@@ -70,7 +94,7 @@ export default function StrategySection() {
 
             {/* Mobile decorative element */}
             <div className="sm:hidden absolute -bottom-4 -right-4 bg-red-500 rounded-full w-12 h-12 opacity-20"></div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import {
   Hanken_Grotesk,
-  Playfair_Display,
   WindSong,
   Koh_Santepheap,
+  Vidaloka,
+  Fjord_One,
 } from "next/font/google";
 import "./globals.css";
 import { NavbarDemo } from "@/components/layout/NavbarDemo";
@@ -28,6 +29,9 @@ const windSong = WindSong({
 export const metadata: Metadata = {
   title: "Jhoni Purba - Pengacara",
   description: "Professional Pengacara Jhoni Purba",
+  icons: {
+    icon: "/iconn.png",
+  },
 };
 
 const kohSantepheap = Koh_Santepheap({
@@ -35,6 +39,20 @@ const kohSantepheap = Koh_Santepheap({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-koh-santepheap",
+});
+
+const fjordOne = Fjord_One({
+  weight: ["400"],
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-fjord-one",
+});
+
+const vidaloka = Vidaloka({
+  weight: ["400"],
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-vidaloka",
 });
 
 export default function RootLayout({
@@ -45,7 +63,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${hankenGrotesk.className} ${windSong.variable} ${kohSantepheap.variable} antialiased`}
+        className={`${hankenGrotesk.className} ${windSong.variable} ${kohSantepheap.variable} ${vidaloka.variable} ${fjordOne.variable} antialiased`}
       >
         <NavbarDemo />
         {children}

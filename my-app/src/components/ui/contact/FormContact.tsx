@@ -2,6 +2,26 @@
 import ButtonKirim from "@/components/ButtonKirim";
 import { useState } from "react";
 import toast from "react-hot-toast";
+import { easeInOut, motion } from "framer-motion";
+
+// Animasi untuk section dan elemen form
+const fadeUp = {
+  hidden: { opacity: 0, y: 40 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.7, ease: easeInOut },
+  },
+};
+const staggerContainer = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.18,
+      delayChildren: 0.1,
+    },
+  },
+};
 
 export default function FormContact() {
   const [form, setForm] = useState({
@@ -81,10 +101,20 @@ export default function FormContact() {
   };
 
   return (
-    <div className="px-4 sm:px-6 md:px-10 lg:px-24 bg-white">
+    <motion.div
+      className="px-4 sm:px-6 md:px-10 lg:px-24 bg-white"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.2 }}
+      variants={fadeUp}
+    >
       {/* Header */}
-      <div className="text-center mb-8">
-        <h2 className="text-xl sm:text-2xl md:text-3xl font-serif font-bold text-gray-800 mb-4">
+      <motion.div
+        className="text-center mb-8"
+        variants={fadeUp}
+        transition={{ delay: 0.1 }}
+      >
+        <h2 className="text-xl sm:text-2xl md:text-3xl font-['Fjord_One'] text-gray-800 mb-4">
           Butuh Konsultasi Hukum?
         </h2>
         <p className="text-gray-500 max-w-2xl mx-auto text-sm sm:text-base">
@@ -92,16 +122,20 @@ export default function FormContact() {
           hukum yang Anda hadapi. Silakan isi formulir di bawah ini untuk
           menghubungi tim kami.
         </p>
-      </div>
+      </motion.div>
 
       {/* Form */}
-      <form
+      <motion.form
         onSubmit={handleSubmit}
         className="max-w-2xl sm:max-w-3xl md:max-w-6xl mx-auto space-y-8 sm:space-y-10 bg-white shadow-[0_0_10px_rgba(0,0,0,0.04),0_0_25px_rgba(0,0,0,0.06)] py-8 sm:py-14 px-4 sm:px-8 md:px-12"
+        variants={staggerContainer}
       >
         {/* 2 kolom pertama */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6">
-          <div>
+        <motion.div
+          className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6"
+          variants={fadeUp}
+        >
+          <motion.div variants={fadeUp}>
             <input
               type="text"
               name="nama"
@@ -115,8 +149,8 @@ export default function FormContact() {
             {errors.nama && (
               <p className="text-red-600 text-sm mt-1">{errors.nama}</p>
             )}
-          </div>
-          <div>
+          </motion.div>
+          <motion.div variants={fadeUp}>
             <input
               type="email"
               name="email"
@@ -130,12 +164,15 @@ export default function FormContact() {
             {errors.email && (
               <p className="text-red-600 text-sm mt-1">{errors.email}</p>
             )}
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
 
         {/* 2 kolom kedua */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6">
-          <div>
+        <motion.div
+          className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6"
+          variants={fadeUp}
+        >
+          <motion.div variants={fadeUp}>
             <input
               type="number"
               name="nomor"
@@ -149,8 +186,8 @@ export default function FormContact() {
             {errors.nomor && (
               <p className="text-red-600 text-sm mt-1">{errors.nomor}</p>
             )}
-          </div>
-          <div>
+          </motion.div>
+          <motion.div variants={fadeUp}>
             <input
               type="text"
               name="subjek"
@@ -164,11 +201,11 @@ export default function FormContact() {
             {errors.subjek && (
               <p className="text-red-600 text-sm mt-1">{errors.subjek}</p>
             )}
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
 
         {/* Pesan */}
-        <div>
+        <motion.div variants={fadeUp}>
           <textarea
             name="pesan"
             placeholder="Tulis pesan atau pertanyaan Anda di sini..."
@@ -182,13 +219,13 @@ export default function FormContact() {
           {errors.pesan && (
             <p className="text-red-500 text-sm mt-1">{errors.pesan}</p>
           )}
-        </div>
+        </motion.div>
 
         {/* Tombol */}
-        <div className="w-full flex justify-center">
+        <motion.div className="w-full flex justify-center" variants={fadeUp}>
           <ButtonKirim isLoading={status === "Loading..."} />
-        </div>
-      </form>
-    </div>
+        </motion.div>
+      </motion.form>
+    </motion.div>
   );
 }

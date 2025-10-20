@@ -37,8 +37,8 @@ export default function NumberTickerSection() {
     };
 
     const intervals = stats.map((stat, i) => {
-      const duration = 2000 + i * 200; // Variasi durasi untuk efek cascade
-      const startTime = Date.now() + i * 100; // Delay untuk setiap number
+      const duration = 2000 + i * 200;
+      const startTime = Date.now() + i * 100;
       let animationFrame: number;
 
       const animate = () => {
@@ -73,7 +73,7 @@ export default function NumberTickerSection() {
   }, [hasAnimated]);
 
   return (
-    <section ref={sectionRef} className="bg-zinc-900 py-20 text-white">
+    <section ref={sectionRef} className="bg-zinc-900 py-20 text-white ">
       <div className="max-w-6xl mx-auto grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 text-center gap-10 lg:gap-16 px-6">
         {stats.map((stat, i) => (
           <div
