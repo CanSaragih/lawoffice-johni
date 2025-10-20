@@ -86,7 +86,7 @@ export default function WelcomeMessage() {
               />
               <div>
                 <p className="font-bold text-[#1a2540] text-lg">
-                  Jhoni Purba, S.H.
+                  Jhoni H. P. Purba, S.H.
                 </p>
                 <p className="text-gray-500 text-sm">
                   Founder & Managing Partner

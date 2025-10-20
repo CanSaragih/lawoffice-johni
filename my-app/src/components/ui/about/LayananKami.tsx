@@ -63,7 +63,7 @@ export default function LayananKami() {
 
         {/* KANAN */}
         <motion.div
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 w-full"
+          className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 sm:gap-6 w-full"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
@@ -75,7 +75,7 @@ export default function LayananKami() {
             },
           }}
         >
-          {layanan.map((item, idx) => (
+          {layanan.map((item) => (
             <motion.div
               key={item.id}
               className="relative bg-gray-50 px-6 py-10 sm:px-8 sm:py-12 border border-gray-100

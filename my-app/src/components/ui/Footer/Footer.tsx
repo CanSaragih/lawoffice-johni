@@ -1,8 +1,19 @@
 "use client";
 
 import { MoveRight } from "lucide-react";
+import { useState } from "react";
+import toast from "react-hot-toast";
 
 export default function FooterSection() {
+  const [email, setEmail] = useState<string>("");
+
+  const handleKirimPesan = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    toast.success(
+      "Terima kasih telah mengirim! Kami akan segera menghubungi Anda."
+    );
+    setEmail("");
+  };
   return (
     <footer className="bg-white border-t border-gray-200">
       <div className="mx-auto max-w-screen-xl px-4 pt-16 pb-8 sm:px-6 lg:px-8">
@@ -21,11 +32,17 @@ export default function FooterSection() {
               <input
                 className="w-full rounded-full border-gray-200 bg-gray-100 p-4 pe-32 text-sm font-medium"
                 id="email"
+                name="email"
                 type="email"
+                value={email}
                 placeholder="example@gmail.com"
+                onChange={(e) => setEmail(e.target.value)}
               />
 
-              <button className="absolute end-1 top-1/2 -translate-y-1/2 rounded-full bg-red-700 px-5 py-3 text-sm font-medium text-white transition hover:bg-red-600 cursor-pointer">
+              <button
+                onClick={handleKirimPesan}
+                className="absolute end-1 top-1/2 -translate-y-1/2 rounded-full bg-red-700 px-5 py-3 text-sm font-medium text-white transition hover:bg-red-600 cursor-pointer"
+              >
                 Kirim Pesan
               </button>
             </div>
@@ -259,8 +276,9 @@ export default function FooterSection() {
 
         <div className="mt-16 border-t border-gray-100 pt-8">
           <p className="text-center text-sm/relaxed text-gray-500">
-            © Company 2022. <span className="font-bold">Jhoni Purba. S.H</span>{" "}
-            All rights reserved.
+            © Company 2025.{" "}
+            <span className="font-bold">Jhoni H. P. Purba. S.H</span> All rights
+            reserved.
           </p>
         </div>
       </div>

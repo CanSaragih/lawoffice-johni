@@ -48,8 +48,7 @@ export default function BenefitProjects() {
             <motion.div
               key={index}
               className="
-                relative flex flex-col bg-white shadow-lg hover:shadow-xl 
-                transition-shadow rounded-lg p-8 overflof-hidden
+                relative flex flex-col bg-white shadow-[0_0_10px_rgba(0,0,0,0.04),0_0_25px_rgba(0,0,0,0.06)] hover:shadow-[0_0_30px_rgba(0,0,0,0.10)] transition-shadow rounded-lg p-8 overflof-hidden
                 before:content-[''] before:absolute before:top-0 before:left-0 
                 before:h-[3px] before:bg-red-700 before:w-0 
                 before:transition-[width] before:ease-out before:duration-500 hover:before:w-full"

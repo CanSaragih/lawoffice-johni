@@ -5,7 +5,6 @@ import Image from "next/image";
 import { useState } from "react";
 import { motion, easeInOut } from "framer-motion";
 
-// Animasi berbeda untuk kolom kiri dan kanan
 const fadeLeft = {
   hidden: { opacity: 0, x: -40 },
   visible: { opacity: 1, x: 0, transition: { duration: 0.7, ease: easeInOut } },
@@ -16,7 +15,7 @@ const fadeRight = {
 };
 
 export default function StrategySection() {
-  const [activeTab, setActiveTab] = useState("Konsultasi Hukum");
+  const [activeTab, setActiveTab] = useState("Perkara Perdata");
 
   return (
     <section className="bg-white py-16 px-4 sm:py-20 sm:px-6 lg:px-16">

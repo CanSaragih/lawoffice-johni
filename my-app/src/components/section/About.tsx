@@ -17,41 +17,39 @@ export default function About() {
       variants={fadeUp}
     >
       <div className="max-w-6xl mx-auto">
-        <motion.div variants={fadeUp}>
-          <h2 className="font-black text-2xl sm:text-2xl md:text-3xl mb-4 text-zinc-700 leading-snug">
+        <motion.div variants={fadeUp} className="text-justify">
+          <h2 className="font-black text-2xl sm:text-2xl md:text-3xl mb-6 text-zinc-700 leading-snug">
             Tentang Kami
           </h2>
           <p className="text-gray-700 leading-relaxed mb-4 text-base sm:text-base md:text-lg">
-            Jhoni Purba, S.H. adalah advokat berpengalaman yang telah
-            berkecimpung dalam dunia hukum sejak awal kariernya. Berdiri dengan
-            komitmen kuat untuk memberikan layanan hukum profesional dan
-            terpercaya, ia mendirikan & memimpin kantor hukum yang fokus pada
-            perlindungan hak klien, penyelesaian sengketa, serta advokasi yang
-            taat hukum dan etika.
+            Jhoni H. P. Purba, S.H. adalah advokat berpengalaman yang
+            berdedikasi dalam memberikan layanan hukum yang profesional, jujur,
+            dan berintegritas tinggi. Dengan pengalaman panjang dalam dunia
+            hukum, beliau memimpin kantor hukum yang berfokus pada penyelesaian
+            perkara perdata, pidana, tata usaha negara, dan berbagai bidang
+            hukum lainnya secara efektif dan beretika.
           </p>
           <p className="text-gray-700 leading-relaxed mb-4 text-base sm:text-base md:text-lg">
-            Selama bertahun-tahun, Jhoni Purba telah menangani berbagai perkara
-            di bidang hukum perdata, pidana, perusahaan, hak kekayaan
-            intelektual, serta konsultasi hukum untuk usaha dan individu. Dengan
-            pendekatan personal dan teliti, beliau selalu berusaha memahami
-            situasi unik setiap klien agar solusi yang diberikan efektif dan
-            sesuai dengan peraturan yang berlaku.
+            Kami melayani berbagai kebutuhan hukum - mulai dari perkara
+            perceraian dan warisan, sengketa tanah, hingga tindak pidana umum
+            maupun khusus seperti korupsi dan pencucian uang. Setiap kasus
+            ditangani dengan analisis mendalam dan strategi hukum yang
+            disesuaikan dengan kondisi unik masing-masing klien.
           </p>
-          <p className="text-gray-700 leading-relaxed mb-4  text-base sm:text-base md:text-lg">
-            Sebagai bagian dari pelayanan total, Jhoni Purba juga memberikan
-            nasihat hukum preventif - termasuk legal drafting, review kontrak,
-            dan due diligence - untuk meminimalkan risiko hukum sebelum suatu
-            usaha atau perjanjian dijalankan. Etos kerja beliau menekankan
-            integritas, kejelasan komunikasi, dan keamanan hukum bagi semua
-            pihak yang dilayaninya.
+          <p className="text-gray-700 leading-relaxed mb-4 text-base sm:text-base md:text-lg">
+            Selain pendampingan litigasi, kami juga menyediakan layanan
+            konsultasi hukum dan pencegahan masalah hukum melalui legal
+            drafting, review kontrak, serta nasihat hukum korporasi. Kami
+            berkomitmen untuk memberikan solusi hukum yang tidak hanya
+            menyelesaikan sengketa, tetapi juga melindungi kepentingan klien
+            dalam jangka panjang.
           </p>
           <p className="text-gray-700 leading-relaxed text-base sm:text-base md:text-lg">
-            Misi beliau adalah menjadi pengacara yang tidak hanya menentukan
-            kemenangan dalam persidangan, tetapi juga mitra kepercayaan bagi
-            klien, dengan menjaga nilai keadilan, transparansi, dan
-            profesionalisme yang tinggi. Jhoni Purba S.H. meyakini bahwa setiap
-            orang berhak atas pembelaan yang adil dan layanan hukum yang tidak
-            hanya legal secara formal, tetapi juga bermartabat dan manusiawi.
+            Dengan mengedepankan profesionalisme, transparansi, dan keadilan,
+            Jhoni H. P. Purba, S.H. percaya bahwa setiap individu dan badan
+            hukum berhak atas perlindungan hukum yang bermartabat. Misi kami
+            adalah menjadi mitra hukum terpercaya yang membantu klien menghadapi
+            tantangan hukum dengan tenang, jelas, dan pasti.
           </p>
         </motion.div>
       </div>

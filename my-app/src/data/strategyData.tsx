@@ -1,64 +1,80 @@
 const tabs = [
   {
-    name: "Konsultasi Hukum",
+    name: "Perkara Perdata",
     content: (
       <>
         <p className="text-gray-700 text-lg leading-relaxed mt-4">
-          Kami memberikan layanan konsultasi hukum untuk membantu Anda memahami
-          hak dan kewajiban hukum Anda. Setiap masalah dianalisis secara
-          mendalam agar solusi yang diberikan tepat dan strategis.
+          Kami menangani berbagai sengketa perdata seperti wanprestasi,
+          perbuatan melawan hukum, dan masalah kepemilikan. Setiap kasus dikaji
+          secara menyeluruh untuk menemukan solusi hukum yang paling efektif.
         </p>
         <p className="text-gray-600 text-lg leading-relaxed mt-3">
-          Baik dalam urusan perdata, pidana, hingga kontrak bisnis — kami
-          memastikan setiap langkah hukum Anda terlindungi dengan baik.
+          Tim kami memastikan setiap hak dan kepentingan Anda terlindungi
+          melalui pendekatan hukum yang strategis dan profesional.
         </p>
       </>
     ),
   },
   {
-    name: "Litigasi & Sengketa",
+    name: "Perkara Pidana",
     content: (
       <>
         <p className="text-gray-700 text-lg leading-relaxed mt-4">
-          Kami berpengalaman dalam menangani berbagai kasus sengketa, baik di
-          pengadilan maupun di luar pengadilan. Pendekatan kami fokus pada
-          penyelesaian yang efisien dan menguntungkan klien.
+          Kami memberikan pendampingan hukum dalam perkara pidana, baik untuk
+          pelapor, terlapor, maupun terdakwa. Setiap proses ditangani dengan
+          ketelitian dan integritas tinggi.
         </p>
         <p className="text-gray-600 text-lg leading-relaxed mt-3">
-          Tim kami siap mewakili Anda dalam proses hukum dengan strategi yang
-          kuat dan argumentasi yang kokoh di hadapan hukum.
+          Dengan pengalaman luas di bidang litigasi, kami membantu memastikan
+          hak-hak Anda tetap terlindungi di setiap tahap proses hukum.
         </p>
       </>
     ),
   },
   {
-    name: "Bisnis & Korporasi",
+    name: "Perkawinan & Cerai",
     content: (
       <>
         <p className="text-gray-700 text-lg leading-relaxed mt-4">
-          Kami membantu perusahaan dan individu dalam mendirikan, mengelola, dan
-          melindungi bisnis dari risiko hukum. Kami memahami dunia korporasi
-          dengan pendekatan legal yang modern.
+          Kami membantu menyelesaikan perkara keluarga seperti perceraian, hak
+          asuh anak, dan pembagian harta bersama dengan pendekatan yang adil dan
+          beretika.
         </p>
         <p className="text-gray-600 text-lg leading-relaxed mt-3">
-          Dari penyusunan kontrak, merger, hingga kepatuhan hukum, kami hadir
-          sebagai mitra hukum terpercaya bisnis Anda.
+          Fokus kami adalah menjaga kepentingan klien dengan penyelesaian yang
+          manusiawi dan tetap menghormati nilai-nilai keluarga.
         </p>
       </>
     ),
   },
   {
-    name: "Analisis Kasus",
+    name: "Pidana Umum",
     content: (
       <>
         <p className="text-gray-700 text-lg leading-relaxed mt-4">
-          Setiap kasus memiliki dinamika unik. Kami melakukan analisis mendalam
-          terhadap setiap detail fakta dan bukti agar strategi hukum yang
-          diambil tepat sasaran.
+          Kami berpengalaman dalam menangani perkara pidana umum seperti
+          pencurian, penganiayaan, dan penipuan. Setiap langkah hukum disusun
+          berdasarkan bukti dan strategi yang matang.
         </p>
         <p className="text-gray-600 text-lg leading-relaxed mt-3">
-          Dengan pengalaman dan ketelitian tinggi, kami membantu Anda melihat
-          potensi risiko dan peluang dalam setiap permasalahan hukum.
+          Dengan pendekatan yang objektif dan transparan, kami memastikan proses
+          hukum berjalan adil bagi semua pihak.
+        </p>
+      </>
+    ),
+  },
+  {
+    name: "Pidana Kasus Khusus",
+    content: (
+      <>
+        <p className="text-gray-700 text-lg leading-relaxed mt-4">
+          Kami menangani perkara pidana khusus seperti korupsi, narkotika, dan
+          tindak pidana pencucian uang dengan tim ahli yang berpengalaman dan
+          terukur.
+        </p>
+        <p className="text-gray-600 text-lg leading-relaxed mt-3">
+          Pendekatan kami berfokus pada pembelaan hukum yang kuat dan berbasis
+          data agar kepentingan klien terlindungi sepenuhnya.
         </p>
       </>
     ),
