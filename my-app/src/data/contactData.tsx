@@ -11,8 +11,7 @@ const contactData = [
     title: "Email Kami",
     desc: (
       <>
-        <p>info@lawofficejohni.com</p>
-        <p>contact@lawofficejohni.com</p>
+        <p>pengacara.jhonipurba@gmail.com</p>
       </>
     ),
   },
@@ -21,8 +20,7 @@ const contactData = [
     title: "Hubungi Kami",
     desc: (
       <>
-        <p>+62 812-3456-7890</p>
-        <p>+62 812-9876-5432</p>
+        <p>+62 813-1956-256</p>
       </>
     ),
   },

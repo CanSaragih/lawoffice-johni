@@ -1,5 +1,5 @@
 const handleWhatsAppClick = () => {
-  const phoneNumber = "6285361500758";
+  const phoneNumber = "628131956256";
   const message = "Hallo Pak Jhoni, saya ingin konsultasi hukum.";
 
   const encodedMessage = encodeURIComponent(message);
