@@ -17,8 +17,8 @@ export async function POST(req: Request): Promise<NextResponse> {
     const { name, email, subject, message } = body;
 
     const data: CreateEmailResponse = await resend.emails.send({
-      from: "Law Office Jhoni Purba <onboarding@resend.dev>",
-      to: "canwhardana@gmail.com",
+      from: "Law Office Jhoni Purba <no-reply@jhonipurba.com>",
+      to: "pengacara.jhonipurba@gmail.com",
       subject: `Pesan baru dari ${name} - ${subject}`,
       html: `
                 <h2>Pesan Baru dari Form Kontak</h2>
