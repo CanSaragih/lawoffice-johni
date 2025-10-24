@@ -27,10 +27,43 @@ const windSong = WindSong({
 });
 
 export const metadata: Metadata = {
-  title: "Jhoni Purba - Pengacara",
-  description: "Professional Pengacara Jhoni Purba",
-  icons: {
-    icon: "/iconn.png",
+  title:
+    "Pengacara Jhoni H P Purba, S.H. | Pengacara Profesional Bogor | Konsultasi Hukum Gratis | Layanan Hukum Terpercaya",
+  description:
+    "Kantor Hukum Jhoni H P Purba, S.H. — Advokat profesional menangani perkara perdata, pidana, perceraian, dan konsultasi hukum di Bogor serta seluruh Indonesia.",
+  keywords:
+    "pengacara bogor, lawyer bogor, jhoni purba, kantor hukum bogor, advokat perdata pidana, jasa hukum, konsultasi hukum",
+  authors: [{ name: "Jhoni H P Purba, S.H.", url: "https://jhonipurba.com" }],
+  robots: {
+    index: true,
+    follow: true,
+  },
+  alternates: {
+    canonical: "https://jhonipurba.com",
+  },
+  openGraph: {
+    title: "Pengacara Jhoni H P Purba, S.H.",
+    description:
+      "Layanan hukum profesional — perdata, pidana, dan konsultasi hukum terpercaya.",
+    url: "https://jhonipurba.com",
+    siteName: "Law Office Jhoni H P Purba, S.H.",
+    images: [
+      {
+        url: "https://jhonipurba.com/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Law Office Jhoni H P Purba, S.H.",
+      },
+    ],
+    locale: "id_ID",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Pengacara Jhoni H P Purba, S.H.",
+    description:
+      "Layanan hukum profesional — perdata, pidana, dan konsultasi hukum terpercaya di Bogor dan seluruh Indonesia.",
+    images: ["https://jhonipurba.com/og-image.jpg"],
   },
 };
 

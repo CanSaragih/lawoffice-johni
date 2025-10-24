@@ -2,6 +2,15 @@ import PageHeader from "@/components/PageHeader";
 import About from "@/components/section/About";
 import BenefitProjects from "@/components/ui/home/BenefitProjects";
 import NumberTickerSection from "@/components/ui/home/NumberTicker";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Tentang Kami | Kantor Hukum Jhoni H P Purba, S.H. | Pengacara Bogor",
+  description:
+    "Tentang Kami - Profil Kantor Hukum Jhoni H P Purba, S.H. — Pengacara profesional di Bogor yang menyediakan layanan hukum perdata, pidana, perceraian, dan konsultasi hukum terpercaya.",
+  keywords:
+    "pengacara bogor, lawyer bogor, jhoni purba, kantor hukum bogor, advokat perdata pidana, jasa hukum, konsultasi hukum",
+};
 
 export default function TentangPage() {
   return (
